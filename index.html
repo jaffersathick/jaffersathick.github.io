@@ -3,27 +3,54 @@
 	<head>
 		<title>Jaffer Sathick</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="img/icon.jpg">
+		<link rel="shortcut icon" href="img/icon.png">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 	<body>
-		<div class="container">
-			<header>
+			<header class="header">
 				<div class="logo">
-					<h3>Jaffer sathick</h3>
+					<img src="img/jaffer.png" height="29px" width="auto" />
 				</div>
 				<nav>
 					<ul>
-						<li>Home</li>
-						<li>contact</li>
-						<li>about</li>
-						<li>UI</li>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#skill">Skill</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#about">About us</a></li>
 					</ul>
 				</nav>
+				<div class="nav-icon">
+					<i class="fa fa-bars menu" onclick="toggle()"></i>
+					<ul class="nav-iconlist">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#skill">Skill</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#about">About us</a></li>
+					</ul>
+				</div>	
 			</header>
-			<main></main>
+			<main>
+				<section class="home" id='home'>
+					<div class="title">
+						<p class="line-1 anim-typewriter">Hi! I'm Jaffer Sathick. I'm Creative Web Desiger.</p>
+					</div>
+				</section>
+				<section class="skill" id='skill'></section>
+				<section class="contact" id='contact'></section>
+				<section class="about" id='about'></section>
+			</main>
 			<footer></footer>
-		</div>
 	</body>
 </html>
+<script>
+function toggle() {
+    var x = document.querySelector(".nav-iconlist");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
