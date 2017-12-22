@@ -72,7 +72,7 @@ header{
 	display: none;
 }
 .avatar{
-	    border-radius: 100%;
+	border-radius: 100%;
     display: inline-block;
     margin: 0 0 2em 0;
     padding: 0.5em;
@@ -80,7 +80,7 @@ header{
     background-color: rgba(255, 255, 255, 0.25);
 }
 .avatar img{
-border-radius: 100%;
+	border-radius: 100%;
     display: block;
     width: 10em;
 }
@@ -135,36 +135,59 @@ nav ul li a{
     animation: ani 1s linear;
 }
 .nav-iconlist li{
+	background-color: #333;
 	padding: 15px 0px;
 	text-align: center;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #fff;
+}
+.nav-iconlist li:hover{
+	background-color: #444;
 }
 .nav-iconlist li a{
-	color: orange;
+	font-weight: 600;
+	color: #42a5f5;
+}
+.nav-iconlist li a:hover{
+	color: #f44c1e;
 }
 .home{
 	height: 100vh;
-	animation: home 3s linear infinite alternate;
+	animation: home 7s linear infinite alternate;
 }
 @keyframes home{
-  100%{background-color: #f44336;}	
-  0%{background-color: #85c05b;}
-  0%{background-color: #42a5f5;}
+  0%{background-color: #f44336;}	
+  50%{background-color: #85c05b;}
+  100%{background-color: #42a5f5;}
 }
-.about p{
-	font-variant: small-caps;
-	font-size: 20px;
-	padding:30px 10px;
+.about h2{
+	font-weight: 600;
+	color: #85c05b;
+	font-size: 25px;
+	padding:5px 10px;
 	max-width: 600px;
 	margin: 0px auto;
 }
-.skill{
-
+.about p{
+	border-left: 3px solid #85c05b;
+	font-size: 20px;
+	padding:0px 10px;
+	max-width: 600px;
+	margin: 5px auto;
 }
-.contact{
+.about p span{
+	color: #444;
+    display: block;
+}
 
+.about ul{
+	border-left: 3px solid #85c05b;
+	font-size: 20px;
+	padding:0px 10px;
+	max-width: 600px;
+	margin: 0px auto;
 }
 .about{
+	padding: 0px 20px;
 }
 main{
 	max-width: 1440px;
@@ -177,45 +200,33 @@ main{
 nav{
 	display: none;
 }
-.about p{
-	font-size: 13px;
-	}
 }
 
 /*type writing*/
 .line-1{
-    position: relative;
-    top: 50%;  
-    width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 180%;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
+    overflow: hidden;    
 }
 
 .anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 4s steps(25) 1s 1 normal both,
+             blinkTextCursor 500ms steps(25) infinite normal;
 }
 
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 24em;}
+  to{width: 10em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
-@media all and (max-width: 786px){
-.line-1{
-    width: 24em;
-    font-size: 94%;
-}
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 24em;}	
+  to{width: 10em;}	
 }
 /*type writing*/
