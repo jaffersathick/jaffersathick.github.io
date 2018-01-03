@@ -9,6 +9,9 @@ body{
 	line-height: 1.428571429;
 	color: #333333;
 }
+:root{
+	--color:#009663;
+}
 h1,h2,h3,h4,h5,h6{
 	font-weight: 500;
 }
@@ -43,21 +46,26 @@ ul{
 header{
 	position: fixed;
 	max-width: 1440px;
+	height: 60px;
 	margin: 0 auto;
 	top:0;
     left: 0;
     right: 0;
 	display: flex;
 	justify-content: space-between;
-	height: 88px;
+	padding: 20px 0px;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 	background: #fff;
 	z-index: 999;
 }
 .logo{
 	padding: 0px 20px;
-	margin: 27px 0px;
 	align-self: center;
+}
+.logo h1{
+	margin: 0;
+	font-size: 40px;
+	color: var(--color);
 }
 .title{
 	max-width: 600px;
@@ -85,44 +93,55 @@ header{
     width: 15em;
 }
 i.fa.fa-bars {
-	color: #42a5f5;
+	color: var(--color);
     font-size: 24px;
     margin: 32px 0px;
     padding: 0 20px;
 }
 nav ul{
 	display: flex;
-	padding: 30px;
 }
-nav ul li a{
-	transition: all 0.4s;
-	background: #fff;
-	font-size: 20px;
-	text-decoration: none;
-	border-top: 4px solid #fff;
-	border-bottom: 4px solid #fff;
-	padding: 15px 0;
-	margin: 0 20px;
+nav{
+	align-self: center;
 }
-nav ul > li > a:hover{
-	border-top: 4px solid #f44c1e;
-	border-bottom: 4px solid #f44c1e;
-	padding: 8px 0;
-	color: #f44c1e;
-}
-nav ul > .active > a{
-	color: blue;
-}
-nav ul li a{
-	color: #42a5f5; 
-}
-@keyframes ani{
+ nav ul li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        padding: 20px 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+        transition: color .25s;
+    }
+
+    nav ul li a:hover {
+        color: var(--color);
+    }
+
+    nav ul li a:hover:before {
+        width: 100%;
+    }
+
+    nav ul li a:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0;
+        background: var(--color);
+        transition: width .25s;
+    }
+*/@keyframes ani{
   from{height: 0px;}
   to{height: 203px;}	
 }
 .nav-iconlist {
 	display: none;
-    height: 203px;
+    height: 200px;
     width: 100%;
     position: absolute;
     z-index: 99;
@@ -130,25 +149,20 @@ nav ul li a{
     top:0;
     left: 0;
     right: 0;
-    background-color: #fff;
-    margin-top:89px;
+    margin-top:88px;
     animation: ani 1s linear;
 }
 .nav-iconlist li{
-	background-color: #333;
+	background-color: #fff;
 	padding: 15px 0px;
 	text-align: center;
-	border-bottom: 1px solid #fff;
 }
-.nav-iconlist li:hover{
+.nav-iconlist li:hover,.nav-iconlist li:active{
 	background-color: #444;
 }
 .nav-iconlist li a{
 	font-weight: 600;
-	color: #42a5f5;
-}
-.nav-iconlist li a:hover{
-	color: #f44c1e;
+	color: var(--color);
 }
 .home{
 	height: 100vh;
@@ -156,14 +170,14 @@ nav ul li a{
 }
 .about h2{
 	font-weight: 600;
-	color: #85c05b;
+	color: var(--color);
 	font-size: 25px;
 	padding:5px 10px;
 	max-width: 600px;
 	margin: 0px auto;
 }
 .about p{
-	border-left: 3px solid #85c05b;
+	border-left: 3px solid var(--color);
 	font-size: 20px;
 	padding:0px 10px;
 	max-width: 600px;
@@ -175,7 +189,7 @@ nav ul li a{
 }
 
 .about ul{
-	border-left: 3px solid #85c05b;
+	border-left: 3px solid var(--color);
 	font-size: 20px;
 	padding:0px 10px;
 	max-width: 600px;
@@ -187,6 +201,7 @@ nav ul li a{
 .about-wrapper{
 	display: flex;
 	justify-content: space-between;
+	margin: 10px 0px;
 }
 .about-l1{
 	width: 600px;
@@ -194,14 +209,13 @@ nav ul li a{
 .about-l2{
 	border-radius: 4px;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-	margin: 10px;
 	width: 400px;
 }
 .about-l2 h4{
 	font-size: 26px;
 }
 .about-l2 i{
-	color: #85c05b;
+	color: var(--color);
 	padding:0px 15px;
 }
 .about-l2 img{
@@ -220,7 +234,7 @@ nav ul li a{
 	width: 400px;
 }
 .allskill h3{
-	color: #85c05b;
+	color: var(--color);
 }
 .wrapskill{
 	width: 800px;
@@ -242,7 +256,7 @@ nav ul li a{
 	width: 50%;
 }
 .skill-bar{
-	background-color:#85c05b; 
+	background-color:var(--color); 
 	border-radius: 25px;
 	text-align: right;
 	padding-right: 20px;
@@ -259,7 +273,7 @@ nav ul li a{
 	font-size: 22px;
 }
 .contact-detail i{
-	color: #85c05b;
+	color: var(--color);
 	padding:0px 15px;
 }
     .btn,
@@ -390,7 +404,8 @@ nav{
     font-size: 180%;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;    
+    overflow: hidden;
+    color: var(--color);    
 }
 
 .anim-typewriter{
