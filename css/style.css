@@ -95,7 +95,6 @@ header{
 i.fa.fa-bars {
 	color: var(--color);
     font-size: 24px;
-    margin: 32px 0px;
     padding: 0 20px;
 }
 nav ul{
@@ -114,9 +113,9 @@ nav{
         font-size: 14px;
         position: relative;
         transition: color .25s;
-    }
+}
 
-    nav ul li a:hover {
+nav ul li a:hover {
         color: var(--color);
     }
 
@@ -135,7 +134,7 @@ nav{
         background: var(--color);
         transition: width .25s;
     }
-*/@keyframes ani{
+@keyframes ani{
   from{height: 0px;}
   to{height: 203px;}	
 }
@@ -149,7 +148,7 @@ nav{
     top:0;
     left: 0;
     right: 0;
-    margin-top:88px;
+    margin-top:60px;
     animation: ani 1s linear;
 }
 .nav-iconlist li{
@@ -227,6 +226,7 @@ nav{
 	justify-content: space-between;
 }
 .allskill{
+        position: relative;
 	border-radius: 4px;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 	margin: 10px;
@@ -235,7 +235,40 @@ nav{
 }
 .allskill h3{
 	color: var(--color);
+    margin-left: 15px;
+    border-left: 1px solid var(--color);
+    padding-left: 25px;
 }
+.allskill h3:before{
+    content: '';
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        border: 1px solid var(--color);
+        background-color: #fff;
+        border-radius: 100%;
+        transform: translateY(42%);
+        left:21px;
+        z-index: 1000;
+}
+.allskill h4{
+    margin-left: 15px;
+    border-left: 1px solid var(--color);
+    padding-left: 25px;
+}
+.allskill h4:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: 1px solid var(--color);
+        background-color: #fff;
+        border-radius: 100%;
+        transform: translateY(75%);
+        left:26px;
+        z-index: 1000;
+    }
+
 .wrapskill{
 	width: 800px;
 	padding: 10px;
@@ -260,7 +293,7 @@ nav{
 	border-radius: 25px;
 	text-align: right;
 	padding-right: 20px;
-	line-height: 40px;
+	line-height: 33px;
 	color: #FFF;
 }
 .contact-detail{
