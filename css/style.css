@@ -14,7 +14,7 @@ body{
 	color: #333333;
 }
 :root{
-	--color:#24b766;
+	--color:#099D5F;
 }
 h1,h2,h3,h4,h5,h6{
 	font-weight: 500;
@@ -173,6 +173,21 @@ nav ul li a:before {
 	height: 100vh;
 	background:linear-gradient(90deg,#1cd8d2, #93edc7);
 }
+.more{
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    color: #fff;
+    background: linear-gradient(270deg,#ed1265,#ed1c48);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+.more:hover{
+    background: linear-gradient(90deg,#ed1265,#ed1c48);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
 .about-head{
     display: flex;
 }
@@ -184,7 +199,7 @@ nav ul li a:before {
 }
 .head-color{
     width: 5px;
-    background:linear-gradient(#f81861,#24b766,#85c05b,#f44c1e);
+    background:repeating-linear-gradient(#ed1265,#ed1c48);
 }
 .head-cont{
     margin-left: 5px;
