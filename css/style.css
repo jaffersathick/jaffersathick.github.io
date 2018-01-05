@@ -14,7 +14,7 @@ body{
 	color: #333333;
 }
 :root{
-	--color:#009663;
+	--color:#24b766;
 }
 h1,h2,h3,h4,h5,h6{
 	font-weight: 500;
@@ -173,6 +173,22 @@ nav ul li a:before {
 	height: 100vh;
 	background:linear-gradient(90deg,#1cd8d2, #93edc7);
 }
+.about-head{
+    display: flex;
+}
+.about-head div h2{
+    font-size: 27px;
+}
+.about-head div p{
+    border-left: none;
+}
+.head-color{
+    width: 5px;
+    background:linear-gradient(#f81861,#24b766,#85c05b,#f44c1e);
+}
+.head-cont{
+    margin-left: 5px;
+}
 .about h2{
 	font-weight: 600;
 	color: var(--color);
@@ -192,7 +208,6 @@ nav ul li a:before {
 	color: #444;
     display: block;
 }
-
 .about ul{
 	border-left: 3px solid var(--color);
 	font-size: 20px;
