@@ -1,6 +1,6 @@
 @font-face {
     font-family: prismfont_CLv3;
-    src: url(../prism/prismfont_CLv3.ttf);
+    src: url(../fonts/prismfont_CLv3.ttf);
 }
 *{
 	margin: 0;
@@ -14,7 +14,7 @@ body{
 	color: #333333;
 }
 :root{
-	--color:#099D5F;
+	--color:#32AE7F;
 }
 h1,h2,h3,h4,h5,h6{
 	font-weight: 500;
@@ -56,8 +56,7 @@ ul{
 header{
 	display: flex;
 	justify-content: space-between;
-        height: 60px;
-
+    height: 60px;
 	padding: 20px 0px;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -108,7 +107,7 @@ nav{
 	align-self: center;
 }
  nav ul li a {
-    color: #333;
+    color: #424242;
     text-decoration: none;
     display: block;
     padding: 20px 25px;
@@ -140,12 +139,11 @@ nav ul li a:before {
 }
 @keyframes ani{
   from{height: 0px;}
-  to{height: 203px;}	
+  to{height: 205px;}	
 }
 .nav-iconlist {
     border-top:5px solid var(--color);
 	display: none;
-    height: 200px;
     width: 100%;
     position: absolute;
     z-index: 999;
@@ -170,49 +168,60 @@ nav ul li a:before {
 	color: var(--color);
 }
 .home{
-	height: 100vh;
-	background:linear-gradient(90deg,#1cd8d2, #93edc7);
+    max-height: 100vh;
+    background-image: url(../img/dd.jpg);
+    background-size: cover;
+    background-color: var(--color);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .more{
     width: 200px;
     padding: 10px 20px;
     margin: 10px auto;
     color: #fff;
-    background: linear-gradient(270deg,#ed1265,#ed1c48);
-    border: none;
+    background:var(--color);
+    border: 5px solid #fff;
     cursor: pointer;
     font-size: 24px;
     border-radius: 5px;
+    outline: none;
+    transition: 1s;
 }
 .more:hover{
-    background: linear-gradient(90deg,#ed1265,#ed1c48);
+    color: var(--color);
+    background:#fff;
+    border: 5px solid var(--color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .about-head{
     display: flex;
-}
-.about-head div h2{
-    font-size: 27px;
 }
 .about-head div p{
     border-left: none;
 }
 .head-color{
     width: 5px;
-    background:repeating-linear-gradient(#ed1265,#ed1c48);
-}
+    border-radius: 10px;
+background-image: linear-gradient(#c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);}
 .head-cont{
     margin-left: 5px;
 }
+.about h2:nth-of-type(1){
+    font-size: 24px;
+    color: var(--color);
+}
 .about h2{
-	font-weight: 600;
-	color: var(--color);
-	font-size: 25px;
+    font-weight: 600;
+	color: #424242;
+	font-size: 20px;
 	padding:5px 10px;
 	max-width: 600px;
 	margin: 0px auto;
 }
 .about p{
+    color: #424242;
 	border-left: 3px solid var(--color);
 	font-size: 20px;
 	padding:0px 10px;
@@ -224,6 +233,7 @@ nav ul li a:before {
     display: block;
 }
 .about ul{
+    color: #424242;
 	border-left: 3px solid var(--color);
 	font-size: 20px;
 	padding:0px 10px;
@@ -270,6 +280,8 @@ nav ul li a:before {
 	width: 400px;
 }
 .allskill h3{
+    font-size: 25px;
+    font-weight: 600;
 	color: var(--color);
     margin-left: 15px;
     border-left: 1px solid var(--color);
@@ -350,8 +362,11 @@ nav ul li a:before {
 	width: 350px;
 	margin: 0 auto;
 }
+.contact-detail h1{
+    color: var(--color);
+}
 .contact-detail h4{
-	font-size: 20px;
+    font-size: 20px;
 }
 .contact-detail i{
 	color: var(--color);
@@ -502,6 +517,9 @@ main{
 .contact-detail{
     order: 1;
 }
+.logo h1{
+    font-size: 30px;
+}
 }
 
 /*type writing*/
@@ -512,7 +530,7 @@ main{
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    color: var(--color);    
+    color: #fff;    
 }
 
 .anim-typewriter{
@@ -524,7 +542,7 @@ main{
   to{width: 10em;}
 }
 @keyframes blinkTextCursor{
-  from{border-right-color: var(--color);}
+  from{border-right-color: #fff;}
   to{border-right-color: transparent;}
 }
 @keyframes typewriter{
