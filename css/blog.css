@@ -85,15 +85,21 @@ header {
     margin: 0px 10px;
 }
 .icon-menu{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .icon-menu a, .menu a{
     color: #fff;
-    padding: 11px 20px;
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
+}
+.icon-menu a{
+    padding: 10px 20px;
+}
+.menu a{
+    padding: 12px 20px;
 }
 .active{
     border-bottom: 3px solid #fff;
@@ -113,7 +119,7 @@ header {
 
 main {
     max-width: 1440px;
-    margin: 60px 0px auto;
+    margin: 60px auto 0px;
 }
 
 .logo {
@@ -128,12 +134,14 @@ main {
     font-family: prismfont_CLv3;
     margin: 0;
     font-size: 5em;
+}
+.logo h1 a{
     color: var(--color);
 }
 .portfolio div{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .portfolio div img{
@@ -141,9 +149,17 @@ main {
     height: 300px;
     opacity: 0.8;
     margin: 10px;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);
+    transition: all .1s linear;
 }
-
+.portfolio div img:hover{
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+    transform: scale(1.02);
+}
+.colors{
+    margin: 10px;
+}
 .colors > div{
     display: flex;
     flex-wrap: wrap;
@@ -152,22 +168,39 @@ main {
 .colors > div > div{
     width: 200px;
     height: 200px;
-    opacity: 0.8;
     color: #fff;
     font-size: 18px;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
     padding: 10px;
     margin: 10px;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);
+    transition: all .1s linear;
 }
+
+.colors > div > div:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+}
+
 .topic{
     padding: 10px 15px;
 }
 .code > div{
     padding: 10px 15px;
-    color: #fff;
-    background: #555;
+
+}
+.code > div > p{
+    color: var(--color);
+}
+.code > div > a{
+    display: block;
+    margin: 5px 0px;
+    padding: 10px;
+    color: var(--color);
+    background: transparent;
+    border-radius: 4px;
+    border:1px solid var(--color);
 }
 @media all and (max-width: 786px) {
     .icon-menu {
@@ -180,10 +213,13 @@ main {
         font-size: 3em;
     }
     .portfolio div img{
-        width: 100%;
-        height: auto;
+        width: calc(100% - 20px);
     }
     .colors > div{
-        justify-content: center;
+        display: block;
+    }
+    .colors > div > div{
+        width: 100%;
+        margin: 0px;
     }
 }
