@@ -238,10 +238,8 @@ nav ul li a:before {
 }
 
 .more {
-    width: 200px;
     padding: 10px 20px;
     margin: 10px auto;
-    color: #fff;
     background: var(--color);
     border: 5px solid #fff;
     cursor: pointer;
@@ -251,8 +249,14 @@ nav ul li a:before {
     transition: 1s;
 }
 
-.more:hover {
+.more a{
+    color: #fff;
+}
+
+.more:hover a{
     color: var(--color);
+}
+.more:hover {
     background: #fff;
     border: 5px solid var(--color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -630,7 +634,7 @@ main {
     }
     .contact-detail {
         width: auto;
-        margin: 0px 10px;
+        margin: 0px 5px;
     }
 }
 

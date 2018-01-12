@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Jaffer Sathick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navigation">
+        <header class="header">
+            <nav class="menu">
+                <a class="tablinks" onclick="bolgTab(event, 'landing')" id="defaultOpen">Home</a>
+                <a class="tablinks" onclick="bolgTab(event, 'portfolio')">Portfolio</a>
+                <a class="tablinks" onclick="bolgTab(event, 'design')">Design</a>
+                <a class="tablinks" onclick="bolgTab(event, 'topic')">Topic</a>
+                <a class="tablinks" onclick="bolgTab(event, 'code')">Code</a>
+            </nav>
+            <nav class="icon-menu">
+                <a class="tablinks" onclick="bolgTab(event, 'landing')" id="defaultOpen"><i class="fa fa-home"></i></a>
+                <a class="tablinks" onclick="bolgTab(event, 'portfolio')"><i class="fa fa-folder"></i></a>
+                <a class="tablinks" onclick="bolgTab(event, 'design')"><i class="fa fa-paint-brush"></i></a>
+                <a class="tablinks" onclick="bolgTab(event, 'topic')"><i class="fa fa-book"></i></a>
+                <a class="tablinks" onclick="bolgTab(event, 'code')"><i class="fa fa-code"></i></a>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section class="landing tabcontent" id='landing'>
+            <div class="logo">
+                <h1>Jaffer Web Design</h1>
+            </div>
+        </section>
+        <section class="portfolio tabcontent" id='portfolio'>
+            <div>
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+                <img src="img/avatar.jpg">
+            </div>
+        </section>
+        <section class="design tabcontent" id='design'>
+            <div class="colors">
+                <h2>Colors</h2>
+                <h4>Look you need color</h4>
+            <div class="red">
+                <div style="background: #ff0000;">#ff0000</div>
+                <div>red</div>
+                <div>red</div>
+                <div>red</div>
+            </div>
+            <div class="red">
+                <div>green</div>
+                <div>green</div>
+                <div>green</div>
+                <div>green</div>
+                <div>green</div>
+                <div>green</div>
+                <div>green</div>
+                <div>green</div>
+            </div>
+            <div class="red">
+                <div>blue</div>
+                <div>blue</div>
+                <div>blue</div>
+                <div>blue</div>
+                <div>blue</div>
+            </div>
+            </div>
+        </section>
+        <section class="topic tabcontent" id='topic'>
+            <div class="html">
+            </div>
+            <div class="css">
+            </div>
+            <div class="js">
+                <div>
+                    <h3>Cookies</h3>
+                    <p>remember me used to save user email and password in his local storage by using cookie</p>
+                    <p>it help to next time login time reduse</p>
+                    <p>I want my website to have a checkbox that users can click so that they will not have to log in each time they visit my website. I know I will need to store a cookie on their computer to implement this, but what should be contained in that cookie?</p>
+                </div>
+            </div>
+        </section>
+        <section class="code tabcontent" id='code'>
+            <div>
+                <div>
+                    <pre>
+Rapple button:
+.btn {
+    margin: 0px 10px;
+    width: 100px;
+    position: relative;
+  overflow: hidden;
+}
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+.btn:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+                    
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+<script>
+function bolgTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
