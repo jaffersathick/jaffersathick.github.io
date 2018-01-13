@@ -111,15 +111,13 @@ header {
     border-radius: 100%;
     display: inline-block;
     margin: 0 0 2em 0;
-    padding: 0.5em;
-    border: solid 1px rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .avatar img {
     border-radius: 100%;
     display: block;
     width: 15em;
+    box-shadow: 0 0 14px rgba(0, 0, 0, .8);
 }
 
 .bars {
@@ -246,6 +244,7 @@ nav ul li a:before {
     font-size: 24px;
     border-radius: 5px;
     outline: none;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
     transition: 1s;
 }
 
@@ -258,7 +257,7 @@ nav ul li a:before {
 }
 .more:hover {
     background: #fff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,0.25);
 }
 
 .about-head {
@@ -272,7 +271,7 @@ nav ul li a:before {
 .head-color {
     width: 5px;
     border-radius: 10px;
-    background-image: linear-gradient(#c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(#AEEA00, #AEEA00 12.5%, #FFEB3B 12.5%, #FFEB3B 25%, #FFC107 25%, #FFC107 37.5%, #EF5350 37.5%, #EF5350 50%, #FF4081 50%, #FF4081 62.5%, #BA68C8 62.5%, #BA68C8 75%, #2979FF 75%, #2979FF 87.5%, #42A5F5 87.5%, #42A5F5);
 }
 
 .head-cont {
@@ -568,6 +567,7 @@ nav ul li a:before {
 .top-footer {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
 }
 
 .social-btns {
@@ -578,10 +578,13 @@ nav ul li a:before {
     order: 2;
 }
 
-.made {
+footer{
     padding: 25px 0px;
     text-align: center;
     font-size: 21px;
+    border-bottom: 10px solid var(--color);
+    color: #fff;
+    background: #444;
 }
 
 .fa-heart {
@@ -696,15 +699,20 @@ main {
 .input {
     width: 100%;
     outline: none;
-    padding: 1em;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 2px solid #ccc;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #c4cdd5;
     transition: 1s linear;
+    margin: 0 0 15px;
+    padding: 1.0625em 1em;
+    color: #30373b;
+    font-size: 16px;
+    transition: all 150ms;
 }
 
 .input:focus {
-    border-bottom: 2px solid var(--color);
+    color: #000000;
+    box-shadow: 0 0 0 2px var(--color);
 }
 
 .form-btn {

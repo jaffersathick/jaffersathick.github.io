@@ -96,7 +96,7 @@ header {
     cursor: pointer;
 }
 .icon-menu a{
-    padding: 10px 20px;
+    padding: 10px 17px;
 }
 .menu a{
     padding: 12px 20px;
@@ -160,6 +160,13 @@ main {
 .colors{
     margin: 10px;
 }
+.colors h2{
+    color: var(--color);
+}
+.colors h2,h4{
+    padding: 0px 5px;
+
+}
 .colors > div{
     display: flex;
     flex-wrap: wrap;
@@ -184,16 +191,29 @@ main {
 }
 
 .topic{
+    font-size: 18px;
     padding: 10px 15px;
 }
-.code > div{
-    padding: 10px 15px;
-
-}
-.code > div > p{
+.topic h1{
+    font-size: 24px;
     color: var(--color);
 }
-.code > div > a{
+
+.topic p:before {
+    content: "\f054";
+    font: normal normal 18px/1 FontAwesome;
+    padding-right: 5px;
+    color: var(--color);
+}
+.links > div{
+    padding: 10px 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.links > div > p{
+    color: var(--color);
+}
+.links > div > a{
     display: block;
     margin: 5px 0px;
     padding: 10px;
@@ -201,6 +221,11 @@ main {
     background: transparent;
     border-radius: 4px;
     border:1px solid var(--color);
+}
+.links > div > a:before {
+    content: "\f08e";
+    font: normal normal 14px/1 FontAwesome;
+    padding-right: 3px;
 }
 @media all and (max-width: 786px) {
     .icon-menu {
@@ -220,6 +245,6 @@ main {
     }
     .colors > div > div{
         width: 100%;
-        margin: 0px;
+        margin: 10px 0px;
     }
 }
