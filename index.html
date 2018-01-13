@@ -210,7 +210,7 @@
 
 </html>
 <script>
-function myFunction(x) {
+    function myFunction(x) {
     x.classList.toggle("change");
     var x = document.querySelector(".nav-iconlist");
     if (x.style.display === "block") {
@@ -224,6 +224,6 @@ document.documentElement.style.setProperty("--color", localStorage.getItem("user
 var colorInput = document.querySelector("#choose-theme-color");
 colorInput.addEventListener("change", function() {  
 document.documentElement.style.setProperty("--color", this.value);
-  localStorage.setItem("userThemeColor", this.value);
 });
+
 </script>
