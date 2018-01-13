@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <div class="input-color-container">
+        <input type="color" id="choose-theme-color" value="#32AE7F">
+    </div>
     <div class="navigation">
         <header class="header">
             <div class="logo">
@@ -217,4 +220,10 @@ function myFunction(x) {
     }
 }
 
+document.documentElement.style.setProperty("--color", localStorage.getItem("userThemeColor"));
+var colorInput = document.querySelector("#choose-theme-color");
+colorInput.addEventListener("change", function() {  
+document.documentElement.style.setProperty("--color", this.value);
+  localStorage.setItem("userThemeColor", this.value);
+});
 </script>
