@@ -1,65 +1,5 @@
-@font-face {
-    font-family: prismfont_CLv3;
-    src: url(../fonts/prismfont_CLv3.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
+body{
     background: #efefef;
-    font-size: 14px;
-    line-height: 1.428571429;
-    color: #333333;
-}
-
-:root {
-    --color: #32AE7F;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 500;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-h4 {
-    font-size: 18px;
-}
-
-h5 {
-    font-size: 14px;
-}
-
-h6 {
-    font-size: 12px;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
 }
 
 .navigation {
@@ -99,7 +39,7 @@ header {
     padding: 10px 17px;
 }
 .menu a{
-    padding: 12px 20px;
+    padding: 9px 20px;
 }
 .active{
     border-bottom: 3px solid #fff;
