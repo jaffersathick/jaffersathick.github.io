@@ -1,4 +1,4 @@
-/* blog */
+/* blog tab */
 function bolgTab(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -12,9 +12,9 @@ function bolgTab(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-/* blog */
-/* index */
-/* nav */
+/* blog tab */
+
+/*index menu nav */
     function myFunction(x) {
     x.classList.toggle("change");
     var x = document.querySelector(".nav-iconlist");
@@ -24,7 +24,7 @@ function bolgTab(evt, cityName) {
         x.style.display = "block";
     }
 }
-/* nav */
+/*index menu nav */
 /* theme */
 document.documentElement.style.setProperty("--color", localStorage.getItem("userThemeColor"));
 var colorInput = document.querySelector("#choose-theme-color");
@@ -32,4 +32,3 @@ colorInput.addEventListener("change", function() {
 document.documentElement.style.setProperty("--color", this.value);
 });
 /* theme */
-/* index */
