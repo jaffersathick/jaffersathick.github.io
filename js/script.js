@@ -25,11 +25,11 @@ function bolgTab(evt, cityName) {
     }
 }
 /*index menu nav */
+
 /* theme */
 document.documentElement.style.setProperty("--color", localStorage.getItem("userThemeColor"));
 var colorInput = document.querySelector("#choose-theme-color");
 colorInput.addEventListener("change", function() {  
 document.documentElement.style.setProperty("--color", this.value);
-e.preventDefault();
 });
 /* theme */

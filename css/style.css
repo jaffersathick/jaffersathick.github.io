@@ -104,19 +104,9 @@ input#choose-theme-color:before  {
     color: #fff;
 }
 
-
-
 .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
-}
-
-.animated.infinite {
-    animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-    animation-duration: 2s;
 }
 
 @keyframes bounceIn {
@@ -247,18 +237,4 @@ input#choose-theme-color:before  {
 
 .slideInDown {
     animation-name: slideInDown;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
- 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
-  border-radius: 8px;
-}
- 
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: rgba(0,0,0,0.3);
 }

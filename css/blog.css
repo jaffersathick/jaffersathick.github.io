@@ -45,6 +45,7 @@ header {
     border-bottom: 3px solid #fff;
     animation: menu 400ms linear;
 }
+
 @keyframes menu {
     from {
         transform: translateY(5px);
