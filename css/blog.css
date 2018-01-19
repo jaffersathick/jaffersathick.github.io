@@ -41,6 +41,7 @@ header {
 .menu a{
     padding: 12px 20px;
 }
+
 .active{
     border-bottom: 3px solid #fff;
     animation: menu 400ms linear;
@@ -167,6 +168,14 @@ main {
     content: "\f08e";
     font: normal normal 14px/1 FontAwesome;
     padding-right: 3px;
+}
+.tabcontent {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 @media all and (max-width: 786px) {
     .icon-menu {
