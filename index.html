@@ -207,7 +207,16 @@
 </body>
 </html>
 <script>
-    
+    function myFunction(x) {
+    x.classList.toggle("change");
+    var x = document.querySelector(".nav-iconlist");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 $(document).ready(function() {
      setTimeout(function() {
         $('body').addClass('loaded');

@@ -13,15 +13,3 @@ function bolgTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 /* blog tab */
-
-/*index menu nav */
-    function myFunction(x) {
-    x.classList.toggle("change");
-    var x = document.querySelector(".nav-iconlist");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-/*index menu nav */
