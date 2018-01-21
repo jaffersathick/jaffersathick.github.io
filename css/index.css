@@ -366,7 +366,7 @@ nav div a:before {
     border-radius: 25px;
     margin: 10px 20px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
-    background-color: #dddddd29;
+    background-color: #333;
 }
 
 .sk1 {
@@ -404,8 +404,12 @@ nav div a:before {
     padding-right: 20px;
     line-height: 25px;
     color: #FFF;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.2);
 }
-
+@keyframes skill{
+    from{width: 0px;}
+    to{width: auto;}
+}
 .btn,
 .btn:before,
 .btn .fa {
@@ -419,7 +423,7 @@ nav div a:before {
 }
 
 .btn .fa {
-    transform: scale(0.8);
+    transform: scale(1);
 }
 
 .facebook:before {
@@ -455,7 +459,7 @@ nav div a:before {
 .btn:focus .fa,
 .btn:hover .fa {
     color: #fff;
-    transform: scale(1);
+    transform: scale(1.2);
 }
 
 .social-btns {
@@ -472,16 +476,15 @@ nav div a:before {
 .btn {
     display: inline-block;
     background-color: transparent;
-    width: 90px;
-    height: 90px;
-    line-height: 90px;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
     margin: 0 10px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-radius: 28%;
+    border-radius: 50%;
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
-    opacity: 0.99;
 }
 
 .btn:before {
@@ -493,7 +496,7 @@ nav div a:before {
 }
 
 .btn .fa {
-    font-size: 38px;
+    font-size: 22px;
     vertical-align: middle;
 }
 
