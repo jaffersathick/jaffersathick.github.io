@@ -28,7 +28,7 @@ header {
 }
 
 .logo h1 {
-    font-family: prismfont_CLv3;
+    font-family: Android;
     margin: 0;
     font-size: 40px;
     color: var(--color);
@@ -404,7 +404,6 @@ nav div a:before {
     padding-right: 20px;
     line-height: 25px;
     color: #FFF;
-    box-shadow: 2px 0px 10px rgba(0,0,0,0.2);
 }
 @keyframes skill{
     from{width: 0px;}
@@ -632,7 +631,7 @@ footer{
         display: block;
     }
     .logo h1 {
-        font-size: 28px;
+        font-size: 20px;
     }
 }
 
