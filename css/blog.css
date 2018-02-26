@@ -73,9 +73,9 @@ main {
 }
 
 .logo h1 {
-    font-family: prismfont_CLv3;
+    font-family: Android;
     margin: 0;
-    font-size: 5em;
+    font-size: 35vw;
 }
 .logo h1 a{
     color: var(--color);
@@ -183,9 +183,6 @@ main {
     }
     .menu {
         display: none;
-    }
-    .logo h1{
-        font-size: 3em;
     }
     .portfolio div img{
         width: calc(100% - 20px);
