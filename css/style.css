@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Android;
-    src: url(../fonts/Android.ttf);
+    font-family: Typo;
+    src: url(../fonts/Typo.ttf);
 }
 
 * {
@@ -205,88 +205,24 @@ ul {
 }
 
 
-
-/* The Loader */
-
-#loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    overflow: hidden;
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
 }
-
-.no-js #loader-wrapper {
-    display: none;
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
-
-#loader {
-    display: block;
-    position: relative;
-    top: 40%;
-    color: var(--color);
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border-radius: 50%;
-    box-shadow: 0 0 14px rgba(0, 0, 0, .3);
-    font-family: Android;
-    background: #fff;
-    font-size: 35px;
-    line-height: 100px;
-    text-align: center;
-    animation: spin 1.7s linear infinite alternate;
-    z-index: 999;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg) scale(.3);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
-}
-
-#loader-wrapper .loader-section {
-    position: fixed;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: var(--color);
-    z-index: 10;
-}
-
-#loader-wrapper .loader-section.section-left {
-    left: 0;
-}
-
-#loader-wrapper .loader-section.section-right {
-    right: 0;
-}
-
-
-/* Loaded styles */
-
-.loaded #loader-wrapper .loader-section.section-left {
-    transform: translateX(-100%);
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.loaded #loader-wrapper .loader-section.section-right {
-    transform: translateX(100%);
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.loaded #loader {
-    opacity: 0;
-    transition: all 0.3s ease-out;
-}
-
-.loaded #loader-wrapper {
-    visibility: hidden;
-    transform: translateY(-100%);
-    transition: all 0.3s 1s ease-out;
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
