@@ -18,7 +18,7 @@ body {
 }
 
 :root {
-    --color: #32AE7F;
+    --color: #66e08f;
 }
 
 h1,
@@ -63,148 +63,6 @@ ul {
     list-style: none;
 }
 
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-delay: 1s;
-}
-
-@keyframes bounceIn {
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        transform: scale3d(.3, .3, .3);
-    }
-
-    20% {
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    40% {
-        transform: scale3d(.9, .9, .9);
-    }
-
-    60% {
-        opacity: 1;
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-
-    80% {
-        transform: scale3d(.97, .97, .97);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-.bounceIn {
-    animation-name: bounceIn;
-    animation-duration: .75s;
-}
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translate3d(-100%, 0, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-.fadeInLeft {
-    animation-name: fadeInLeft;
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translate3d(100%, 0, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-.fadeInRight {
-    animation-name: fadeInRight;
-}
-
-@keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale3d(.3, .3, .3);
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-.zoomIn {
-    animation-name: zoomIn;
-}
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        visibility: visible;
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.slideInLeft {
-    animation-name: slideInLeft;
-}
-
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
-        visibility: visible;
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.slideInRight {
-    animation-name: slideInRight;
-}
-
-@keyframes slideInDown {
-    0% {
-        transform: translateY(-100%);
-        visibility: visible;
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.slideInDown {
-    animation-name: slideInDown;
-}
-
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -226,3 +84,4 @@ ul {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+

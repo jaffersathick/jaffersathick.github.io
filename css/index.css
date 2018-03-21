@@ -33,8 +33,17 @@ header {
     height: calc(100% - 60px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
+}
+
+.title a {
+    font-size: 30px;
+    color:#fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(45deg,#66cdaa,#00fa9a);
 }
 
 .title p {
@@ -121,11 +130,12 @@ nav div a:focus:before,nav div a:active:before {
     display: none;
     background-color: #222;
     width: 100%;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     margin-top: 60px;
     animation: ani 300ms linear;
 }
@@ -136,6 +146,7 @@ nav div a:focus:before,nav div a:active:before {
     text-align: center;
     font-weight: 600;
     color: #fff;
+    font-size: 30px;
 }
 
 .nav-iconlist a:hover,
@@ -147,7 +158,7 @@ nav div a:focus:before,nav div a:active:before {
     height: 100vh;
     background-image: url(../img/back.jpg);
     background-position: center;
-    background-color:#3a434a;
+    background-color:#222;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -161,19 +172,6 @@ nav div a:focus:before,nav div a:active:before {
     border-left: none;
 }
 
-.head-color {
-    width: 5px;
-    border-radius: 10px;
-    background-image: linear-gradient(#AEEA00, #AEEA00 12.5%, #FFEB3B 12.5%, #FFEB3B 25%, #FFC107 25%, #FFC107 37.5%, #D32F2F 37.5%, #D32F2F 50%, #FF4081 50%, #FF4081 62.5%, #BA68C8 62.5%, #BA68C8 75%, #2979FF 75%, #2979FF 87.5%, #42A5F5 87.5%, #42A5F5);
-}
-
-.head-cont {
-    margin-left: 5px;
-}
-
-.head-cont p{
-    margin: 0 !important;
-}
 
 main{
     background-color: var(--color);
@@ -204,8 +202,8 @@ main{
     display: block;
     content: "";
     height: 3px;
-    width: 70px;
-    background-color: #fff;
+    width: 50px;
+    background: linear-gradient(45deg,#fff,var(--color));
     position: absolute;
     left: 10px;
     bottom: 0
@@ -247,56 +245,31 @@ main{
 .skills {
     display: flex;
     justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .allskill {
-    position: relative;
-    padding: 0px 15px;
+    padding: 30px 15px;
 }
 
 .allskill h2 {
     color: var(--color);
-    margin-left: 15px;
-    border-left: 2px solid var(--color);
-    padding-left: 25px;
-    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.allskill h2:before {
-    content: '';
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    border: 2px solid var(--color);
-    background-color: #444;
-    border-radius: 100%;
-    transform: translateY(50%);
-    left: 23px;
-    z-index: 2;
-}
 
 .allskill h4 {
-    margin-left: 15px;
-    border-left: 2px solid var(--color);
-    padding-left: 25px;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 4px;
 }
 
-.allskill h4:before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 2px solid var(--color);
-    background-color: #444;
-    border-radius: 100%;
-    transform: translateY(50%);
-    left: 25px;
-    z-index: 2;
-}
-
-.allskill h4:last-of-type{
-    padding-bottom: 20px;
-}
 
 .btn,
 .btn:before,
@@ -412,10 +385,6 @@ footer{
     }
     .skills {
         display: block;
-    }
-    .allskill {
-        width: auto;
-        border-bottom: 2px solid var(--color);
     }
     .wrapskill {
         width: auto;
