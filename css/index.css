@@ -22,7 +22,7 @@ header {
 }
 
 .logo h1 {
-    font-family: typo;
+    font-family: Typo;
     margin: 0;
     font-size: 40px;
     color: var(--color);
@@ -183,9 +183,12 @@ main{
     max-width: 600px;
     margin: 0px auto 50px;
 }
+
 .detail h4{
     font-size: 1.5em;
+    font-weight: 100;
 }
+
 .detail i{
     padding-right: 15px;
 }
@@ -403,7 +406,7 @@ footer{
         width: 100%;
     }
     .about p,.about h2,.detail {
-    padding: 0px 30px;
+    padding: 0px 25px;
     }
     .about h2::before{
         left: 30px;
