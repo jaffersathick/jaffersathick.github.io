@@ -406,7 +406,7 @@ footer{
         width: 100%;
     }
     .about p,.about h2,.detail {
-    padding: 0px 25px;
+        padding: 0px 20px;
     }
     .about h2::before{
         left: 30px;
