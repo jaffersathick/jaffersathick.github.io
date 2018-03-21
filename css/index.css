@@ -40,9 +40,10 @@ header {
     font-size: 30px;
     color:#fff;
     margin: 5px;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
-    background: linear-gradient(45deg,#66cdaa,#00fa9a);
+    background: var(--color);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
 }
 
 .title p {
@@ -185,7 +186,7 @@ main{
 
 .detail h4{
     font-size: 1.5em;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .detail i{
