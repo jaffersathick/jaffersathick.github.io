@@ -305,6 +305,7 @@ main{
 }
 .about > div:nth-of-type(1){
     max-width: 300px;
+    margin: auto;
 }
 
 .skill,.portfolio{
