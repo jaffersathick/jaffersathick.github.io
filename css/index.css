@@ -1,9 +1,97 @@
+@font-face {
+    font-family: typo;
+    src: url(../fonts/typo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: typo, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #222;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+:root {
+    --color: #66e08f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .navigation {
     position: fixed;
+    background-color: #fff;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #222;
     z-index: 999;
 }
 
@@ -21,10 +109,9 @@ header {
     align-self: center;
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 40px;
-    color: var(--color);
+.logo img {
+    width: 40px;
+    height: auto;
 }
 
 .title {
@@ -32,28 +119,28 @@ header {
     height: calc(100% - 60px);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
 }
 
 .title a {
-    font-size: 30px;
+    font-size: 25px;
     color:#fff;
     margin: 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 3px 20px;
+    line-height: 40px;
+    border-radius: 25px;
     background: var(--color);
-    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 }
 
 .title p {
     font-size: 7vw;
-    color: #fff;
+    color: #222;
 }
 
 .title p:nth-of-type(2) {
     font-size: 5vw;
-    color: #fff;
 }
 
 .nav-icon {
@@ -66,25 +153,20 @@ header {
     cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,.bar2 {
     width: 20px;
     height: 2px;
-    background-color: #fff;
+    background-color: #222;
     margin: 4px 0;
     transition: 0.4s;
 }
 
 .change .bar1 {
-    transform: rotate(-45deg) translate(-3px, 6px);
+    transform: rotate(-45deg) translate(-3px, 3px);
 }
 
 .change .bar2 {
-    transform: translate(1000px, 0px);
-    opacity: 0;
-}
-
-.change .bar3 {
-    transform: rotate(45deg) translate(-2px, -6px);
+    transform: rotate(45deg) translate(-1px, -2px);
 }
 
 
@@ -97,10 +179,10 @@ nav {
 }
 
 nav div a {
-    color: #fff;
+    color: #222;
     text-decoration: none;
     display: block;
-    padding: 20px 25px;
+    padding: 10px 25px;
     text-transform: uppercase;
     font-size: 14px;
     position: relative;
@@ -117,18 +199,9 @@ nav div a:focus:before,nav div a:active:before {
     width: 100%;
 }
 
-@keyframes ani {
-    from {
-        transform: scale(.8);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
 .nav-iconlist {
-    display: none;
-    background-color: #222;
+    transform:translateY(100%);
+    background-color: #fff;
     width: 100%;
     position: fixed;
     overflow: hidden;
@@ -137,7 +210,7 @@ nav div a:focus:before,nav div a:active:before {
     right: 0;
     bottom: 0;
     margin-top: 60px;
-    animation: ani 300ms linear;
+    transition: all 200ms ease;
 }
 
 .nav-iconlist a {
@@ -145,7 +218,7 @@ nav div a:focus:before,nav div a:active:before {
     padding: 15px 0px;
     text-align: center;
     font-weight: 600;
-    color: #fff;
+    color: #222;
     font-size: 30px;
 }
 
@@ -156,9 +229,8 @@ nav div a:focus:before,nav div a:active:before {
 
 .home {
     height: 100vh;
-    background-image: url(../img/back.jpg);
+    background-image: url(../img/bg.svg);
     background-position: center;
-    background-color:#222;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -180,7 +252,7 @@ main{
 .detail {
     color: #fff;
     padding: 0px 10px;
-    max-width: 600px;
+    max-width: 200px;
     margin: 0px auto 50px;
 }
 
@@ -194,6 +266,7 @@ main{
 }
 
 .about h2{
+    text-align: center;
     position: relative;
     color: #fff;
     padding: 0px 10px;
@@ -201,17 +274,8 @@ main{
     margin: 0px auto 10px;
 }
 
-.about h2::before {
-    display: block;
-    content: "";
-    height: 3px;
-    width: 50px;
-    background: linear-gradient(45deg,#fff,var(--color));
-    position: absolute;
-    left: 10px;
-    bottom: 0
-}
 .about p {
+    text-align: center;
     color: #fff;
     font-size: 1.5em;
     padding: 0px 10px;
@@ -220,7 +284,7 @@ main{
 }
 
 .about img{
-    padding: 20%;
+    padding: 10px 0px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -229,21 +293,23 @@ main{
 .about {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: var(--color);
     max-width: 1440px;
     margin: 0 auto;
 }
 
 .about > div{
-    width: 50%;
+    width: 100%;
 }
-.about > div:nth-of-type(2){
-    padding: 30px 0px;
+.about > div:nth-of-type(1){
+    max-width: 300px;
 }
 
-.skill{
-    background: #444;
-    color: #fff;
+.skill,.portfolio{
+    background: #fff;
+    color: #222;
 }
 .skills {
     display: flex;
@@ -253,6 +319,8 @@ main{
 }
 
 .allskill {
+    margin: auto;
+    max-width: 600px;
     padding: 30px 15px;
 }
 
@@ -266,68 +334,32 @@ main{
 .allskill h4 {
     display: inline-block;
     margin: 5px;
-    padding: 10px;
-    background-color: transparent;
+    padding: 5PX 10px;
+    background-color: #e7ffeb;
     color: var(--color);
     border: 1px solid var(--color);
-    border-radius: 4px;
+    border-radius: 5px;
 }
-
-
-.btn,
-.btn:before,
-.btn .fa {
-    transition: all 0.35s;
-    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
-}
-
-.btn:before {
-    top: 90%;
-    left: -110%;
-}
-
-.btn .fa {
-    transform: scale(1);
-}
-
-.facebook:before {
-    background-color: #3b5998;
-}
-
-.facebook .fa {
+.facebook .fa:hover {
     color: #3b5998;
 }
 
-.google:before {
-    background-color: #dc4a38;
+.bitbucket .fa:hover {
+    color: #205081;
 }
 
-.google .fa {
-    color: #dc4a38;
-}
-
-.linkedin:before {
-    background-color: #0077b5;
-}
-
-.linkedin .fa {
+.linkedin .fa:hover {
     color: #0077b5;
 }
-
-.btn:focus:before,
-.btn:hover:before {
-    top: -10%;
-    left: -10%;
+.github .fa:hover {
+    color: #333;
 }
-
-.btn:focus .fa,
-.btn:hover .fa {
-    color: #fff;
-    transform: scale(1.2);
+.behance .fa:hover {
+    color: #1769ff;
 }
 
 .social-btns {
-    margin: 5px auto;
+    margin: 10px auto;
     font-size: 0;
     text-align: center;
     position: relative;
@@ -338,38 +370,25 @@ main{
 }
 
 .btn {
-    display: inline-block;
-    background-color: transparent;
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
     margin: 0 10px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
-}
-
-.btn:before {
-    content: '';
-    width: 120%;
-    height: 120%;
-    position: absolute;
-    transform: rotate(45deg);
 }
 
 .btn .fa {
-    font-size: 22px;
+    font-size: 20px;
+    color: #aaa;
     vertical-align: middle;
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
 footer{
-    padding: 25px 0px;
+    padding: 50px 0px;
     text-align: center;
     font-size: 21px;
-    color: #fff;
-    background: #333;
+    color: #222;
 }
 
 .fa-heart {
@@ -382,6 +401,10 @@ footer{
     }
     .header nav {
         display: none;
+    }
+    .home {
+        height: 50vh;
+        margin-top: 60px;
     }
     .about-wrapper {
         display: block;
@@ -405,9 +428,6 @@ footer{
     .about > div{
         width: 100%;
     }
-    .about p,.about h2,.detail {
-        padding: 0px 30px;
-    }
     .about h2::before{
         left: 30px;
     }
@@ -415,6 +435,9 @@ footer{
     padding: 10%;
     }
     .title p {
-        font-size: 10vw;
+        font-size: 13vw;
+    }
+    .title p:nth-of-type(2) {
+        font-size: 8vw;
     }
 }

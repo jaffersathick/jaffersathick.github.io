@@ -3,12 +3,13 @@
 
 <head>
     <title>Jaffer Sathick</title>
+    <meta name="description" content="I am Jaffer Sathick. UI, UX Designer & Front-End Developer love to create new Design.">
+    <meta name="author" content="Jaffer Sathick">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/jaffer.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 
@@ -17,7 +18,7 @@
             <div class="navigation">
                 <header class="header">
                     <div class="logo">
-                        <h1>Jaffer Sathick</h1>
+                        <img src="img/jaffer.png" alt="logo" />
                     </div>
                     <nav>
                         <div>
@@ -32,7 +33,6 @@
                         <div class="bars" onclick="myFunction(this)">
                           <div class="bar1"></div>
                           <div class="bar2"></div>
-                          <div class="bar3"></div>
                         </div>
                         <div class="nav-iconlist">
                             <a href="#home">Home</a>
@@ -46,28 +46,28 @@
             </div>
             <div class="title">
                 <p>Jaffer Sathick R</p>
-                <p>UI & UX</p>
-                <a href="resume.pdf" target="_blank">Resume</a>
+                <p>UI Designer</p>
+                <a href="jaffer_resume.pdf" target="_blank">Resume</a>
             </div>
         </section>
     <main>
         <section class="about" id='about'>
-            <div><img src="img/bgE21.png" /></div>
+            <div><img src="img/bgE21.png" alt="avatar" /></div>
             <div>
+            	<div class="detail">
+                    <h4><i class="fa fa-user"></i>R.jaffer sathick</h4>
+                    <h4><i class="fa fa-pencil"></i>UI Designer</h4>
+                    <h4><i class="fa fa-university"></i>BCA</h4>
+                    <h4><i class="fa fa-birthday-cake"></i>April 7,1997</h4>
+                    <h4><i class="fa fa-globe"></i>English, Tamil</h4>
+                    <h4><i class="fa fa-phone"></i>+91-9176212861</h4>
+                </div>
                 <h2>About</h2>
                 <p>I am Creative Web Designer. Basically i am loving Design now i am a web designer. Creating User Experience, Designing User Interfaces for web and mobile applications is what i do.I love what I do, actually i choose what i love to do.</p>
                 <h2>EDUCATION</h2>
                 <p>BCA(Bachelor of Computer Application) at St.joseph's College,Trichy.</p>
                 <h2>EXPERIENCE</h2>
                 <p>Front-End Developer at GotoWisdom,Trichy.</p>
-                <div class="detail">
-                    <h4><i class="fa fa-user"></i>R.jaffer sathick</h4>
-                    <h4><i class="fa fa-pencil"></i>Web Designer</h4>
-                    <h4><i class="fa fa-university"></i>BCA</h4>
-                    <h4><i class="fa fa-birthday-cake"></i>April 7,1997</h4>
-                    <h4><i class="fa fa-globe"></i>English, Tamil</h4>
-                    <h4><i class="fa fa-phone"></i>+91-9176212861</h4>
-                </div>
             </div>
         </section>
         <section class="skill" id='skill'>
@@ -102,11 +102,13 @@
             </div>
         </section>
     </main>
-    <footer id="contact" class="fade">
+    <footer id="contact">
         <div class="social-btns">
             <a class="btn linkedin" href="https://www.linkedin.com/in/jaffer-sathick-8a2b84143/"><i class="fa fa-linkedin"></i></a>
-            <a class="btn google" href="https://plus.google.com/u/0/114073162168882377864"><i class="fa fa-google"></i></a>
             <a class="btn facebook" href="https://www.facebook.com/jaffersathick.jaffer"><i class="fa fa-facebook"></i></a>
+            <a class="btn behance" href="https://github.com/jaffersathick"><i class="fa fa-behance"></i></a>
+            <a class="btn bitbucket" href="https://bitbucket.org/jaffersathick/"><i class="fa fa-bitbucket"></i></a>
+            <a class="btn github" href="https://github.com/jaffersathick"><i class="fa fa-github"></i></a>
         </div>
         <p><i class="fa fa-copyright"></i> 2018 Web Design with <i class="fa fa-heart"></i> by Jaffer</p>
     </footer>
@@ -116,10 +118,10 @@
 function myFunction(x) {
 x.classList.toggle("change");
 var x = document.querySelector(".nav-iconlist");
-if (x.style.display === "block") {
-    x.style.display = "none";
+if (x.style.transform === "translateY(0%)") {
+    x.style.transform = "translateY(100%)";
 } else {
-    x.style.display = "block";
+    x.style.transform = "translateY(0%)";
 }
 }
 
