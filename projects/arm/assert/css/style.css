@@ -148,7 +148,16 @@ header {
     margin: 0 auto;
 }
 
+span,a,p,li{
+        font-size: 18px;
+    font-weight: 400;
+    color: #4e5767;
+    letter-spacing: .5px;
+    line-height: 28px;
+}
+
 .logo {
+    flex:1;
     padding: 0px 20px;
     align-self: center;
 }
@@ -228,16 +237,15 @@ nav div a {
     text-decoration: none;
     display: block;
     padding: 10px 25px;
-    text-transform: uppercase;
-    font-size: 14px;
     position: relative;
     transition: color .25s;
     outline: none;
-    font-weight: 500;
 }
 
 nav div a:hover {
     color: var(--brandblue);
+    text-decoration: none;
+
 }
 
 nav div a:focus:before,nav div a:active:before {
@@ -319,62 +327,78 @@ nav div a:focus:before,nav div a:active:before {
 }
 
 .landing-div{
+    position: relative;
         display: flex;
     height: calc(100vh - 60px);
-    background: url(../image/bg.png);
-        background-repeat: no-repeat;
-    background-position: right;
-}
-.header{
    
 }
-.right-land,.left-land{
+.right-land{
+    position: absolute;
     width: 50%;
+    height: 100%;
+    right: 0;
+    background: url(../image/hugo-car-rental.png);
+        background-repeat: no-repeat;
+    background-position: right;
+        background-size: contain;
+}
+.right-land,.left-land{
+        display: flex;
+    flex-direction: column;
     height: calc(100vh - 60px);
+    justify-content: center;
 }
 .left-land > h1,.left-land > div{
-    margin-left: 10vw;
+    margin-left: 25px;
+        max-width: 500px;
+
 }
 .left-land h1 {
+    color: var(--blackblue);
         font-weight: 300;
     font-size: 35px;
-    margin-top: 30vh;
-        line-height: 40px;
+        line-height: 50px;
         text-transform: uppercase;
         }
         .land-btn{
-    margin: 20px 0px;
+    margin: 40px 0px;
         }
     .land-btn a{
         background: var(--brandblue);
-        box-shadow: 0px 0px 5px var(--brandblue);
             color: #fff;
-    font-size: 15px;
+    font-size: 16px;
         letter-spacing: 1.5px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 10px 28px;
+    border-radius: 3px;
+    transition: .4s;
+    }
+    .land-btn a:hover{
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.08);
+
     }
     .title-about{
         color: var(--blackblue);
-    font-size: 42px;
-    line-height: 51px;
-    margin-bottom: 34px;
-    position: relative;
-    font-weight: 300;
-    letter-spacing: 4px;
+        font-size: 42px;
+        line-height: 51px;
+        margin-bottom: 34px;
+        text-align: center;
+        position: relative;
+        font-weight: 300;
+        letter-spacing: 4px;
     }
 
  .title-about:before {
      content: '';
-         height: 50px;
-    width: 50px;
-    border-radius: 30px;
-    background-color: var(--brandblue);
-    position: absolute;
-    top: -2px;
-    left: -7px;
-    opacity: 0.3;
+     height: 2px;
+     width: 50px;
+     border-radius: 0;
+     background-color: var(--blackblue);
+     position: absolute;
+     top: 50px;
+     left: calc(50% - 25px);
+     /* opacity: 0.3; */
      /*transition: transform 0.75s cubic-bezier(0.770, 0.000, 0.230, 1.005);*/
  }
  .min-about {
@@ -393,10 +417,11 @@ nav div a:focus:before,nav div a:active:before {
  }
 .about-min-wrapper p{
         color: var(--gray);
-    font-family: sf-pro;
-    font-size: 24px;
-    line-height: 42px;
-    font-weight: 300;
+        font-family: sf-pro;
+        font-size: 21px;
+        line-height: 37px;
+        font-weight: 300;
+        text-align: center;
 }
 .min-service{
     min-height: 100vh;
@@ -441,4 +466,99 @@ nav div a:focus:before,nav div a:active:before {
     text-align: center;
         padding: 0px 30px;
     color: #222;
+}
+.min-what-do{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.what-do-min-wrapper-left,.what-do-min-wrapper-right{
+    width: 50%;
+}
+.what-do-min-wrapper-left{
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: center;
+        background-image: url('../image/transparent-car.png');
+}
+.what-do-min-wrapper-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 50px;
+}
+.what-do-item{
+       width: calc(50% - 40px);
+    margin: 20px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px #aaa;
+}
+.what-do-item img {
+    width: 50px;
+        margin: 15px;
+}
+.what-do-item h5{
+        margin: 20px 0px;
+    color: var(--blackblue);
+    font-size: 18px;
+}
+.what-do-item p{
+    text-align: center;
+        padding: 0px 30px;
+    color: #222;
+}
+
+.min-school{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.school-min-wrapper-left,.school-min-wrapper-right{
+    width: 50%;
+}
+.school-min-wrapper-left{
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: center;
+        background-image: url('../image/transparent-car.png');
+}
+.school-min-wrapper-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 50px;
+}
+.school-item{
+    margin: 20px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.school-item h5{
+        margin: 20px 0px;
+    color: var(--blackblue);
+        font-size: 36px;
+    letter-spacing: -0.04px;
+    line-height: 42px;
+}
+.school-item p{
+}
+.school-item>div.land-btn{
+    margin: 20px 0px;
+}
+.school-item li{
+    background-image: url(../image/check.svg);
+    background-repeat: no-repeat;
+        background-position: left center;
+
+    padding-left: 30px;
+
 }
